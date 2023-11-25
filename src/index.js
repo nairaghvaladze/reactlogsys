@@ -12,7 +12,7 @@ function App() {
 
     
         const userSingin=localStorage.getItem('logedin')=== 'true'; 
-        const userSingout=localStorage.getItem('logedin')==="false";
+       
      
        
 
@@ -30,11 +30,7 @@ function App() {
              <Route path="/mtavari" element={<First />} />            
             <Route path="/registracia" element={<Reg />}/>
             <Route path="/login" element={<Login /> } />
-            <Route  path="/main " element={userSingout ?
-            (<Navigate to="/mtavari"  />)
-            : (<Navigate to="/" replace={false} /> ,2000 )
-            
-            } />
+           
             <Route path="/main" element={<Page />} />
 
           
